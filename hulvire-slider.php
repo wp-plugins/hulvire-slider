@@ -78,7 +78,7 @@ if(!class_exists('WP_Hulvire_Slider'))
 					(function($) {
 					    $(window).load(function() {
 							$(\"body\").prepend('<div class=\"popup_wraper\"></div>');
-							$.ajax({
+							/*$.ajax({
 							  method: \"POST\",
 							  url: \"". HUU__SLIDER_URL ."PopUp.php\",
 							  data: { postovaneudaje:'". huu_get_popUp_slider() ."',popupdelay:'". $settingPopUpDelay ."'}
@@ -89,10 +89,22 @@ if(!class_exists('WP_Hulvire_Slider'))
 		  					            animation: '$settingAnimacia',
 		  						    controlsContainer: '.flex-container'
 		  					    });
-							  });
+							  });*/
 
 					    });
 					})(jQuery)
+					jQuery(document).ready(function($){
+						$('.popup_content').delay(".$settingPopUpDelay.").slideDown(500);
+						// PopUp CLOSE'==========================================
+						$('.popup_close').mouseover(function(){
+								$(this).css({'color':'#fff'});
+							}).mouseout(function(){
+								$(this).css({'color':'#E1312D'});
+							}).click(function(){
+								$('.popup_content').delay(100).slideUp(600);
+							});
+				
+					});
 					</script>";
 				}else{
 				
