@@ -1,0 +1,226 @@
+/* Slider 
+==========================================*/
+.slider-wrapper {
+    font-weight:normal;
+    padding-top:27px;
+    padding-bottom:14px;
+    border-bottom:1px solid #f5d432;
+}
+/* #Slider Style Flexslider
+================================================== */
+.flex-container a:active, .flexsliderHulvire a:active, .flex-container a:focus, .flexsliderHulvire a:focus {
+    outline: none;
+}
+.slides, .flex-control-nav, .flex-direction-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.slides, .flex-control-nav {
+    overflow:hidden;
+}
+/*      FlexSlider Necessary Styles  */
+.flexsliderHulvire {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.flexsliderHulvire .slides > li {
+    /*display: none;*/
+    -webkit-backface-visibility: hidden;
+}
+.flexsliderHulvire .slides img {
+    display: block;
+    width:100%;
+    height:100%;
+}
+.flex-pauseplay span {
+    text-transform: capitalize;
+}
+.slides:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+html[xmlns] .slides {
+    display: block;
+}
+* html .slides {
+    height: 1%;
+}
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {
+    display: block;
+}
+/*      FlexSlider Styling  */
+.flexsliderHulvire {
+    background: transparent;
+    position: relative;
+    zoom: 1;
+    margin: 0 0 20px;
+}
+.flexsliderHulvire .slides {
+    zoom: 1;
+}
+.flexsliderHulvire .slides > li {
+    position: relative;
+}
+.flexsliderHulvire .flex-container {
+    zoom: 1;
+    position: relative;
+}
+/* Caption style */
+.flexsliderHulvire .flex-caption {
+    background:url(images/cap-bg.png) repeat;
+    padding: 10px;
+    margin: 0;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    color: #fafafa;
+    font-size: 13px;
+    line-height: 18px;
+    width:306px;
+    height:auto;
+    border-radius:10px;
+    overflow:hidden;
+}
+.flexsliderHulvire .flex-caption a.flex-read {
+    color:#fff;
+}
+.flexsliderHulvire .flex-caption a.flex-read:hover {
+    color:#FFFF00;
+}
+.flexsliderHulvire .flex-caption h1 {
+    margin-bottom:10px;
+    width:200px;
+    margin-left:15px;
+    margin-right:15px;
+    margin-top:15px;
+}
+.flexsliderHulvire .flex-caption h1 a {
+    color:#ffffff;
+    font-size:24px;
+    line-height:25px;
+    text-transform:uppercase;
+}
+.flexsliderHulvire .flex-caption p {
+    width:200px;
+    margin-left:15px;
+    margin-right:15px;
+    color:#868686;
+    font-size:13px;
+    font-family:"Trebuchet MS";
+}
+.flexsliderHulvire .caption {
+    /*background:#211916;
+    border-radius:10px;*/
+    padding: 10px;
+    margin: 0;
+    position: absolute;
+    right: 30px;
+    bottom: 40px;
+    color: #fafafa;
+    font-size: 13px;
+    line-height: 18px;
+    /*max-width: 55%;*/
+    width:308px;
+    height:194px;
+}
+/* Direction Nav */
+.flexsliderHulvire .flex-direction-nav {
+    height: 0;
+    position:absolute;
+    bottom: 3px;
+	right: 50%;
+	margin: 0 -75px;
+	z-index:1000;
+}
+.flexsliderHulvire .flex-direction-nav li a {
+    position: absolute;
+    bottom: 60px;
+    cursor: pointer;
+    background:#515156;
+    color:#fafafa;
+    font-family:Trebuchet, Helvetica, sans-serif;
+    text-align:center;
+    border-radius:2px;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    text-decoration:none!important;
+}
+.flexsliderHulvire .flex-direction-nav li a:hover {
+    background: #F7D705!important;
+}
+.flexsliderHulvire .flex-direction-nav li .next {
+    right: 0;
+}
+.flexsliderHulvire .flex-next::before {
+    content: "";
+    font-family: "icomoon";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    margin: 8px !important;
+    color: #FFF !important;
+    display: block !important;
+    font-size: 20px !important;
+}
+.flexsliderHulvire .flex-direction-nav li .prev {
+    right: 30px;
+}
+.flexsliderHulvire .flex-prev::before {
+    content: "";
+    font-family: "icomoon";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    margin: 8px !important;
+    color: #FFF !important;
+    display: block !important;
+    font-size: 20px !important;
+}
+.flexsliderHulvire .flex-direction-nav li .disabled {
+    opacity: .3;
+    filter:alpha(opacity=30);
+    cursor: default;
+}
+/* Control Nav */
+.flexsliderHulvire .flex-control-nav {
+    position: absolute;
+	z-index:100;
+	bottom: -22px;
+	text-align:left;
+}
+.flexsliderHulvire .flex-control-nav li {
+	font-size:10px;
+    margin: 2px 0 2px 5px;
+    zoom: 1;
+    display:inline-block;
+}
+
+.flexsliderHulvire .flex-control-nav li a {
+	color:transparent;
+    width: 10px !important;
+    height: 10px;
+    background:url(images/pagination221.png) no-repeat transparent;
+    cursor: pointer;
+}
+.flexsliderHulvire .flex-control-nav li a:hover {
+    background:url(images/pagination221.png) no-repeat transparent;
+    background-position: 0 -10px;
+}
+.flexsliderHulvire .flex-control-nav li a.flex-active {
+    background:url(images/pagination221.png) no-repeat transparent;
+    background-position: 0px -10px;
+    cursor: default;
+}

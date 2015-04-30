@@ -1,0 +1,45 @@
+/* = .slider
+---------------------------------------------------------------------------------------------------*/
+.popup_content {
+	display:none;
+	position:fixed;
+	top:70px;
+	left:50%;
+	margin:0 0 0 -20%;
+	padding:0;
+	width:40%;
+	z-index:2000;
+	-webkit-box-shadow:  2px 7px 20px 5px black;
+	box-shadow:  2px 7px 20px 5px black;
+	opacity:0.95;
+	border: 1px solid white;
+	background:white;
+	}
+.popup_obsah {
+	position: relative;
+	padding: 20px 30px 30px; 
+	margin: 0;
+	text-align: left;
+	color: #888;
+	background: transparent; /*#f1f0ea;	#d9d3cd;*/
+}
+.popup_close {
+	color:#E1312D;
+	position:absolute;
+	right:20px;
+	top:10px;
+	font-size:250%;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+	cursor:pointer;
+	z-index:100;
+	text-shadow: 1px 1px 2px #000000;
+	filter: dropshadow(color=#000000, offx=1, offy=1);
+}
+.popup_close:hover {
+	text-shadow: 0px 0px 0px #000000;
+	filter: dropshadow(color=#000000, offx=0, offy=0);
+	color:#F15922
+}

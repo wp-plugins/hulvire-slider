@@ -1,0 +1,14 @@
+jQuery(document).ready(function($){
+	$('.popup_content').delay(10000).slideDown(500);
+	// PopUp CLOSE'==========================================
+	$('.popup_close').mouseover(function(){
+			$(this).css({'color':'#fff'});
+		}).mouseout(function(){
+			$(this).css({'color':'#E1312D'});
+		}).click(function(){
+			$('.popup_content').delay(100).slideUp(600);
+		});
+		
+	PopUp();
+		
+});
