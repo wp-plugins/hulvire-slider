@@ -78,6 +78,11 @@ if(!class_exists('WP_Hulvire_Slider'))
 					(function($) {
 					    $(window).load(function() {
 							$(\"body\").prepend('<div class=\"popup_wraper\"></div>');
+						    $(\".popup_wraper\").html(". huu_get_popUp_slider() .");
+	  				        $('.flexsliderHulvire').flexslider({
+	  					            animation: '$settingAnimacia',
+	  						    controlsContainer: '.flex-container'
+	  					    });
 							/*$.ajax({
 							  method: \"POST\",
 							  url: \"". HUU__SLIDER_URL ."PopUp.php\",
