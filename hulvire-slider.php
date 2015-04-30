@@ -3,7 +3,7 @@
 Plugin Name: Hulvire slider
 Plugin URI: http://www.amfajnor.sk/_hulvire_web/hulvire%20old/index.htm
 Description: slider manager so setupom (typ animacie – FADE alebo SLIDE) pouziva jQuery FlexSlider v2.2.0 "http://flexslider.woothemes.com/", shortcut v postoch a strankach: <strong>[huu_slider]</strong> alebo v temach <strong>huu_slider();</strong>
-Version: 1.4
+Version: 1.4.1
 Author: Fajnor
 Author URI: http://amfajnor.sk
 License: GPL2
@@ -37,7 +37,7 @@ if(!class_exists('WP_Hulvire_Slider'))
 			
 			
 			
-			define( 'HUU_SLIDER_VERSION', '1.4' );
+			define( 'HUU_SLIDER_VERSION', '1.4.1' );
 			define( 'HUU__SLIDER_URL', plugin_dir_url( __FILE__ ) );
 			define( 'HUU__SLIDER_DIR', plugin_dir_path( __FILE__ ) );
 			
@@ -77,39 +77,24 @@ if(!class_exists('WP_Hulvire_Slider'))
 					echo "<script type='text/javascript' charset='utf-8'>
 					(function($) {
 					    $(window).load(function() {
-							$(\"body\").prepend('<div class=\"popup_wraper\"></div>');
-						    $(\".popup_wraper\").html(". huu_get_popUp_slider() .");
+							$('body').prepend('<div class=\"popup_wraper\"></div>');
+						    $('.popup_wraper').html('". huu_get_popUp_slider() ."');
 	  				        $('.flexsliderHulvire').flexslider({
 	  					            animation: '$settingAnimacia',
 	  						    controlsContainer: '.flex-container'
 	  					    });
-							/*$.ajax({
-							  method: \"POST\",
-							  url: \"". HUU__SLIDER_URL ."PopUp.php\",
-							  data: { postovaneudaje:'". huu_get_popUp_slider() ."',popupdelay:'". $settingPopUpDelay ."'}
-							})
-							  .done(function( msg ) {
-							    $(\".popup_wraper\").html(msg);
-		  				        $('.flexsliderHulvire').flexslider({
-		  					            animation: '$settingAnimacia',
-		  						    controlsContainer: '.flex-container'
-		  					    });
-							  });*/
+							$('.popup_content').delay(".$settingPopUpDelay.").slideDown(500);
+							// PopUp CLOSE'==========================================
+							$('.popup_close').mouseover(function(){
+									$(this).css({'color':'#fff'});
+								}).mouseout(function(){
+									$(this).css({'color':'#E1312D'});
+								}).click(function(){
+									$('.popup_content').delay(100).slideUp(600);
+								});
 
 					    });
 					})(jQuery)
-					jQuery(document).ready(function($){
-						$('.popup_content').delay(".$settingPopUpDelay.").slideDown(500);
-						// PopUp CLOSE'==========================================
-						$('.popup_close').mouseover(function(){
-								$(this).css({'color':'#fff'});
-							}).mouseout(function(){
-								$(this).css({'color':'#E1312D'});
-							}).click(function(){
-								$('.popup_content').delay(100).slideUp(600);
-							});
-				
-					});
 					</script>";
 				}else{
 				
